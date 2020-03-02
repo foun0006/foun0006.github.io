@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 3: Forms</title>
+</head>
+	<body>
+		<div id="wrapper" class="wrapper">
+		<section id="html-forms" class="main-section">
+			<form action="somepage.php" method="get">
+				<div id="fn-container" class="form-elm">
+					<label for="FirstName">First name</label>
+					<input type="text" name="FirstName" id="FirstName" placeholder="Your First Name">
+				</div>
+		<div id="ln-container" class="form-elm">
+			<label for="LastName">Last Name</label>
+			<input type="text" name="LastName" id="LastName" placeholder="Your Last Name">
+		</div>
+		<div id="email-container" class="form-elm">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" value="example@mail.com">
+		</div>
+		<div id="pass-container" class="form-elm">
+			<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass" required>
+			</div>
+
+			<div id="intro-container" class="form-elm">
+				<label for="intro">Introductory Text</label>
+					<textarea name="intro" id="intro" placeholder="Enter intro here"> Enter a small introduction to yourself here.</textarea>
+			</div>
+		<div>
+			<label for="dte">Date of Birth</label>
+					<input type="date" name="dte" id="dte"><br>
+				</div>
+		<div id="phone-container" class="form-elm">
+				<label for="phone">Mobile Number</label>
+				<input type="tel" id="phone" name="phone"
+     			  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555"
+       			required>
+<!--ask if it's the 'tel' not being intergrated, or if I messed something up. it doesn't fill with the pattern, but it makes it so you have to type it as such-->
+		<div id="radio-container" class="form-elm">
+			<p>Gender</p>
+			<label for="Male">
+				<input type="radio" name="gender-form" id="male" value="male" checked>
+						Male
+				</label>
+				<label>
+				<input type="radio" name="gender-form" id="female" value="female">
+						Female
+			</label>
+		</div>
+		<div id="address-container" class="form-elm">
+			<label for="Address">Address</label>
+			<input type="text" name="Address" id="Adress" placeholder="Number and Street">
+		</div>
+		<div id="city-container" class="form-elm">
+			<label for="City">City</label>
+				<input type="text" name="City" id="City">
+		</div>
+		<div id="place-contianer" class="form-elm">
+			<label for="ProvinceOrTerritory">Province or Territory</label>
+				<select id="Province
+					OrTerritory" name="Province
+					OrTerritory">
+					<optgroup label="Province">
+						<option value="british_columbia">British Columbia</option>
+						<option value="manitoba">Manitoba</option>
+						<option value="new_brunswick">New Brunswick</option>
+						<option value="newfoundland_and_labrador">Newfoundland and Labrador</option>
+						<option value="nova_scotia">Nova Scotia</option>
+						<option value="ontario">Ontario</option>
+						<option value="prince_edward_island">Prince Edward Island</option>
+						<option value="quebec">Quebec</option>
+						<option value="saskatuwan">Saskatuwan</option>
+					</optgroup>
+					<optgroup label="Territory">
+						<option value="northwest_territories">Northwest Territories</option>
+						<option value="nunavut">Nunavut</option>
+						<option value="yukon">Yukon</option>
+					</optgroup>
+				</select>
+			</div>
+<!--change the province/state option based on the country?-->
+
+			<div id="country-contianer" class="form-elm">
+				<label for="Country">Country</label>
+					<select id="Country" name="Country">
+						<option value="canada">Canada</option>
+						<option value="usa">USA</option>
+						<option value="scotland">Scotland</option>
+						<option value="france">France</option>
+						<option value="italy">Italy</option>
+					</select>
+				</div>
+				<div id="postal-container" class="form-elm">
+					<label for="Postal">Postal Code</label>
+					<input type="Postal" name="Postal" id="Postal" placeholder="ex. A1A 1A1">
+				</div>
+				<fieldset>
+					<legend>Hobbies:</legend>
+					<div>
+						<label for="reading">
+							Reading
+							<input type="checkbox" name="Reading" id="reading">
+						</label><br>
+						<label for="tv">
+							Watching TV
+							<input type="checkbox" name="tv" id="tv">
+						</label><br>
+						<label for="videogames">
+							Playing Videogames
+							<input type="checkbox" name="videogames" id="videogames">
+						</label><br>
+						<label for="workingout">
+							Working Out
+							<input type="checkbox" name="workingout" id="workingout">
+						</label><br>
+						<label for="artsandcrafts">
+							Arts And Crafts
+							<input type="checkbox" name="artsandcrafts" id="artsandcrafts">
+						</label><br>
+				</fieldset>
+					
+
+				<label for="ur">Website:</label>	
+					<input type="url" name="ur" id="ur" placeholder="ex. https://myspace.com"><br>
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+	</body>
+</html>

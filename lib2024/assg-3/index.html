@@ -2,11 +2,15 @@
 <html>
 <head>
 	<title>Assignment 3: Forms</title>
+		<h1><center>Entry Form</center></h1>
 </head>
 	<body>
 		<div id="wrapper" class="wrapper">
-		<section id="html-forms" class="main-section">
-			<form action="somepage.php" method="get">
+			<section id="html-forms" class="main-section">
+				<form action="somepage.php" method="get">
+				</form>
+			</section>
+		</div>
 				<div id="fn-container" class="form-elm">
 					<label for="FirstName">First name</label>
 					<input type="text" name="FirstName" id="FirstName" placeholder="Your First Name">
@@ -38,20 +42,21 @@
      			  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555"
        			required>
 <!--ask if it's the 'tel' not being intergrated, or if I messed something up. it doesn't fill with the pattern, but it makes it so you have to type it as such-->
+		</div>
 		<div id="radio-container" class="form-elm">
 			<p>Gender</p>
-			<label for="Male">
+			<label>
 				<input type="radio" name="gender-form" id="male" value="male" checked>
 						Male
-				</label>
-				<label>
+			</label>
+			<label>
 				<input type="radio" name="gender-form" id="female" value="female">
 						Female
 			</label>
 		</div>
 		<div id="address-container" class="form-elm">
 			<label for="Address">Address</label>
-			<input type="text" name="Address" id="Adress" placeholder="Number and Street">
+			<input type="text" name="Address" id="Adress" placeholder="000 Fake Street">
 		</div>
 		<div id="city-container" class="form-elm">
 			<label for="City">City</label>
@@ -59,9 +64,7 @@
 		</div>
 		<div id="place-contianer" class="form-elm">
 			<label for="ProvinceOrTerritory">Province or Territory</label>
-				<select id="Province
-					OrTerritory" name="Province
-					OrTerritory">
+				<select id="ProvinceOrTerritory" name="ProvinceOrTerritory">
 					<optgroup label="Province">
 						<option value="british_columbia">British Columbia</option>
 						<option value="manitoba">Manitoba</option>
@@ -80,8 +83,6 @@
 					</optgroup>
 				</select>
 			</div>
-<!--change the province/state option based on the country?-->
-
 			<div id="country-contianer" class="form-elm">
 				<label for="Country">Country</label>
 					<select id="Country" name="Country">
@@ -92,13 +93,13 @@
 						<option value="italy">Italy</option>
 					</select>
 				</div>
-				<div id="postal-container" class="form-elm">
-					<label for="Postal">Postal Code</label>
-					<input type="Postal" name="Postal" id="Postal" placeholder="ex. A1A 1A1">
+				<div id="postcode-container" class="form-elm">
+					<label for="postcode">Postal Code</label>
+					<input type="text" name="postcode" id="postcode" placeholder="ex. A1A 1A1">
+					<!--My html checker says that placeholders are only allowed for certain feilds, this not being one of them. However it shows up on the page, and displays of an example format for entering, because postal codes can vary in format, so I took a chance and left it in my code.-->
 				</div>
 				<fieldset>
 					<legend>Hobbies:</legend>
-					<div>
 						<label for="reading">
 							Reading
 							<input type="checkbox" name="Reading" id="reading">
@@ -120,8 +121,6 @@
 							<input type="checkbox" name="artsandcrafts" id="artsandcrafts">
 						</label><br>
 				</fieldset>
-					
-
 				<label for="ur">Website:</label>	
 					<input type="url" name="ur" id="ur" placeholder="ex. https://myspace.com"><br>
 				<button type="submit">Submit</button>

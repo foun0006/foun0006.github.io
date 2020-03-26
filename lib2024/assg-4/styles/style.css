@@ -1,0 +1,231 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/*
+	Color Pallete
+
+	Green : #7cc576;
+	Blue : #6dcff6;
+	Primary Text : #000000;
+*/
+
+/************************
+		MOBILE FIRST
+************************/
+
+/*Make sure major containers in your HTML file are set to 100% width to achieve Fluid Layout */
+.col-main, .col-footer, img {
+	width:100%;
+}
+
+/* Header styles */ 
+header {
+	background: #7cc576;
+
+}
+
+.logo {
+	float: left;
+	width:100px;
+	padding: 15px;
+	box-sizing: border-box;
+	background: #1976D2;
+	/*box-sizing border box makes the width adjust according to padding*/
+}
+
+.desktop-nav {
+	float: right;
+	width: calc(100% - 100px);
+	display: none;
+	max-width: 600px;
+}
+
+.desktop-nav ul {
+	width:100%;
+}
+
+.desktop-nav li {
+	box-sizing: border-box;
+	width: 33%;
+	float: left;
+	background: #F44336;
+}
+
+.main-nav a {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+}
+
+
+.ham {
+	float: right;
+	background: #BBDEFB;
+}
+
+.mobile-nav {
+	width:100%;
+	clear: both;
+}
+
+.mobile-nav-container {
+	position: relative;
+	clear: both;
+}
+
+.mobile-nav li {
+	box-sizing: border-box;
+	width:100%;
+	padding: 10px;
+	background: #FFEB3B;
+	border-bottom: 2px solid #121212;
+
+}
+
+
+
+/*main content styles*/
+
+.site-content {
+
+	background: #BBDEFB;
+	padding: 15px;
+	width:100%;
+	box-sizing: border-box;
+}
+
+.site-sidebar {
+	background: #;
+	padding: 15px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/*footer styles*/
+footer {
+	background: #7cc576;
+	padding: 15px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.company-info {
+	background: #1976D2;
+}
+
+.links {
+	background: #FFEB3B;
+}
+
+.social-media {
+	background: #757575;
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	header {
+		background: #FFEB3B;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	
+	/*header styles*/
+
+	/*the following css is used to restrict the content beyond 1280px*/
+	/*This is to make sure the main content is in the readbable area for large screen sizes*/
+	header, main, footer {
+
+		max-width: 1280px;
+		margin: 0 auto;
+
+	}
+
+	.desktop-nav {
+		display: block;
+	}
+
+	.mobile-nav {
+		display: none;
+	}
+
+	.ham {
+		display: none;
+	}
+
+	.site-content {
+		float: left;
+		width: 70%;
+		box-sizing: border-box;
+	}
+
+	.site-sidebar {
+		float: left;
+		width: 30%;
+		box-sizing: border-box;
+	}
+
+	.image-gallery .img-slide {
+		width: 33%;
+		padding: 10px;
+		box-sizing: border-box;
+		float: left;
+	}
+
+	.col-footer {
+		width: 31%;
+		box-sizing: border-box;
+		margin: 0 1%;
+		padding: 10px;
+		float: left;
+	}
+}

@@ -18,7 +18,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -57,28 +56,23 @@ table {
 	Primary Text : #000000;
 */
 
-/************************
-		MOBILE FIRST
-************************/
 
-/*Make sure major containers in your HTML file are set to 100% width to achieve Fluid Layout */
 .col-main, .col-footer, img {
 	width:100%;
 }
 
-/* Header styles */ 
+/*Header style*/ 
 header {
 	background: #7cc576;
 
 }
 
 .logo {
-	float: left;
-	width:100px;
+	float: right;
+	width:10%;
 	padding: 15px;
 	box-sizing: border-box;
 	background: #1976D2;
-	/*box-sizing border box makes the width adjust according to padding*/
 }
 
 .desktop-nav {
@@ -133,7 +127,7 @@ header {
 
 
 
-/*main content styles*/
+/*main content style*/
 
 .site-content {
 
@@ -145,15 +139,15 @@ header {
 
 .site-sidebar {
 	background: #;
-	padding: 15px;
-	width: 100%;
+	padding: 10px;
+	width: 30%;
 	box-sizing: border-box;
 }
 
-/*footer styles*/
+/*footer style*/
 footer {
 	background: #7cc576;
-	padding: 15px;
+	padding: 10px;
 	width: 100%;
 	box-sizing: border-box;
 }
@@ -179,13 +173,11 @@ footer {
 
 @media only screen and (min-width: 768px) {
 	
-	/*header styles*/
+	/*header style*/
 
-	/*the following css is used to restrict the content beyond 1280px*/
-	/*This is to make sure the main content is in the readbable area for large screen sizes*/
 	header, main, footer {
 
-		max-width: 1280px;
+		max-width: 960px;
 		margin: 0 auto;
 
 	}
@@ -209,7 +201,7 @@ footer {
 	}
 
 	.site-sidebar {
-		float: left;
+		float: right;
 		width: 30%;
 		box-sizing: border-box;
 	}

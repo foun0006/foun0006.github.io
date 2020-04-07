@@ -26,7 +26,7 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				Ans for Ques 2
+				Version control is a system that allows you to track and record changes to your files, making it possible to pull up older versions if needed. You know, a program like Github.
 			</p>
 		</li>
 		<!-- Ques 3 -->
@@ -138,7 +138,7 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				Ans for Ques 12
+				To link to an external style sheet, before closin the bosy tag, include &ltscript type="text/javascript" src="filelocation/filename.js"&gt&lt/script&gt
 			</p>
 		</li>
 		<!-- Ques 13 -->
@@ -165,28 +165,34 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				Ans for Ques 14
+				@keyframes spin {<br>
+					from {<br>
+						transform: rotate(0deg);<br>
+					}<br>
+					to {<br>
+						transform: rotate(360deg);<br>
+					}<br>
+			}
 			</p>
 		</li>
 		<!-- Ques 15 -->
 		<li>
 			<p>
 				<strong>Ques:</strong>
-				Create CSS animation block to rotate an element that has the following properties: class “rotate-me” and it rotates 5 times at intervals of 0.5s with “linear” transition using animation keyframes “spin”
+				Create CSS animation block to rotate an element that has the following properties: class “rotate-me” and it rotates 5 times at intervals of 0.5s with “linear” transition using animation keyframes “spin”.
 			</p>
 			<p>
 				<strong>Ans:</strong>
 				<div class="rotate-me">
-				animation: <br>
-				spin 0.5s linear infinite,<br>
-				<br>
-			@keyframes spin {<br>
-			from {<br>
-				transform: rotate(0deg);<br>
-			}<br>
-			to {<br>
-				transform: rotate(360deg);<br>
-			}<br>
+    				animation-name: spin;<br>
+    				animation-duration: 0.5s;<br>
+    				animation-iteration-count: 5;<br>
+    				animation-timing-function: 0.5s;<br>
+				}<br>
+				@keyframes spin {<br>
+    				from {transform:rotate(0deg);}<br>
+    				to {transform:rotate(360deg);}<br>
+				}
 			</p>
 		</li>
 		<!-- Ques 16 -->

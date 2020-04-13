@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+	<title>Final</title>
+	<style type="text/css"></style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<img src="img/logo.png" class="logo" alt="Book Logo" width="15%">
+		<h1>Read More Books</h1>
+	<div class="overlay-container loader-container">
+		<div class="loader"></div>
+	</div>
+	<div id="container" class="container">
+		<!-- header start -->
+		<header class="site-header">
+		<!-- main navigation start -->
+		<nav class="main-nav-container desktop-nav">
+			<ul class="main-nav clearfix">
+				<li>
+					<a href="home.html">Home</a>
+				</li>
+				<li>
+					<a href="about-us.html">About</a>
+				<li>
+					<a href="schedule.html">Schedule</a>
+				</li>
+				<li>
+					<a href="portfolio.html">Portfolio</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- main navigation end -->
+		</header>
+	</div>
+		<!-- header end -->
+
+
+<!--Photo Start-->
+	<section id="image" class="main-section">
+		<article>
+			<img src="img/img-1.jpeg" alt="Book Shelves">
+		</article>
+	</section>
+<!--Photo End-->
+<!--About Start-->
+<h2>About</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut sem gravida, gravida nunc eu, maximus libero. Sed ut diam feugiat, commodo sem ac, varius ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nisl non lectus gravida condimentum. Aliquam erat volutpat. Fusce aliquam a sapien ac vulputate. Vivamus venenatis posuere ligula, quis auctor mauris sagittis a. Nam rhoncus tincidunt lectus a tincidunt. Vivamus et mattis ex, in lobortis elit. Aliquam viverra justo vel eros aliquam, vitae ullamcorper diam laoreet. Etiam posuere lacinia lorem at sollicitudin. Proin nec velit pretium, condimentum augue eleifend, pellentesque diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris eget neque cursus nibh pulvinar consectetur vel ac justo. Proin blandit feugiat vestibulum. Etiam maximus vestibulum metus quis posuere.</p><p>Integer tincidunt nunc a ligula elementum finibus. Sed eu enim laoreet, consectetur erat id, gravida eros. Etiam vitae ullamcorper eros. In hac habitasse platea dictumst. Nunc accumsan ornare pellentesque. Nam eget commodo erat, sit amet convallis ante. Donec quis iaculis mauris, finibus feugiat erat. In nulla ante, cursus eget elementum id, finibus sit amet libero. Praesent accumsan aliquam massa at porta. Morbi vulputate arcu sed nulla sodales convallis. Phasellus sit amet justo id justo porta efficitur nec eget massa. Proin vitae nulla hendrerit, mattis turpis in, commodo enim. Praesent egestas egestas diam et mattis. Curabitur nec elit tristique, tincidunt neque quis, vehicula nisl. Nulla sit amet erat condimentum, porttitor lectus nec, pellentesque est. Aliquam laoreet sollicitudin massa ac hendrerit. </p>
+<!--About End-->
+
+<!--Table Start-->
+	 <section id="table-section" class="main-section">
+	 	<h3>Schedule</h3>
+            <table border="pixel-size">
+                <thead>
+                    <tr>
+                        <th>TIME</th>
+                        <th>MONDAY</th>
+                        <th>TUESDAY</th>
+                        <th>WEDNESDAY</th>
+                        <th>THURSDAY</th>
+                        <th>FRIDAY</th>             
+                    </tr>
+                </thead>
+            	<tbody>
+                    <tr>
+                        <td>09:00-11:00</td>
+                        <td>Communicartions I</td>
+                        <td>Client Services</td>
+                        <td>Special Collections</td>
+                        <td>Directed Research Seminar</td>
+                        <td>Client Services</td>
+                    </tr>
+                    <tr>
+                        <td>11:00-12:30</td>
+                        <td>Reference</td>
+                        <td>Internet App</td>
+                        <td>Library Software</td>
+                        <td>French</td>
+                        <td>Reference</td>
+                    </tr>
+                   <tr>
+                        <td>14:00-15:00</td>
+                        <td>Aquisitions</td>
+                        <td>General Elective</td>
+                        <td>Marketing</td>
+                        <td>Emerging Library Tech</td>
+                        <td>Library Software</td>
+                    </tr> 
+                    <tr>
+                        <td>015:30-17:30</td>
+                        <td>French</td>
+                        <td>French</td>
+                        <td>Aquisitions</td>
+                        <td>Subject Analysis</td>
+                        <td>Internet App</td>
+                    </tr>                      
+                </tbody>
+            </table>
+        </section>
+            <!--Table End-->
+
+            <!--Profile Edit Start-->
+	<main class="main clearfix" id="main">
+			<section class="form-value-transfer clearfix">
+				<form id="form" action="submit.php" method="post">
+					<h4>Edit Profile</h4>
+					<p>
+						<label>Name:</label>
+						<input type="text" name="name" id="name" required="">
+					</p>
+					<p>
+						<label>Email:</label>
+						<input type="email" required name="email" id="email">
+					</p>
+		<div id="address-container" class="form-elm">
+			<label for="address">Address:</label>
+			<input type="text" name="address" id="adress">
+		</div>
+		<div id="city-container" class="form-elm">
+			<label for="City">City:</label>
+				<input type="text" name="City" id="City">
+		</div>
+		<div id="place-contianer" class="form-elm">
+			<label for="Province">Province</label>
+				<select id="Province" name="Province">
+					<optgroup label="Province">
+						<option value="british_columbia">British Columbia</option>
+						<option value="mb">Manitoba</option>
+						<option value="nb">New Brunswick</option>
+						<option value=nl>Newfoundland and Labrador</option>
+						<option value="ns">Nova Scotia</option>
+						<option value="on">Ontario</option>
+						<option value="pei">Prince Edward Island</option>
+						<option value="qc">Quebec</option>
+						<option value="sk">Saskatuwan</option>
+					</optgroup>
+					<optgroup label="Territory">
+						<option value="nt">Northwest Territories</option>
+						<option value="nu">Nunavut</option>
+						<option value="yt">Yukon</option>
+					</optgroup>
+				</select>
+			</div>
+			<div id="postal-code" class="postal-code">
+				<label for="postal-code">Postal Code</label>
+					<input type="text" required="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" value="" name="pc" id="pc">
+					</div>
+				<button type="submit">Submit</button>
+			</form>
+	<!--Profile Edit End-->
+	<!--Profile Info Start-->
+				<div id="results">
+					<h2>Profile Info</h2>
+					<p >Name: <span id="name_result"></span></p>
+					<p >Email: <a href="#" id="email_result"></a></p>
+					<p>Address: <span id="address_result"></span></p>
+					<p>City: <span id="city_result"></span></p>
+					<p>Province: <span id="province_result"></span></p>
+					<p >Postal Code: <span id="pc_result"></span></p>
+				</div>
+			</section>
+	</main>
+
+
+<!-- footer start -->
+<footer class="footer" id="footer">
+		<div class="footer-container">
+			<section class="col-footer links">
+				<h5>Quick Links</h5>
+				<nav>
+					<ul>
+						<li>
+							<a href="Scedule.html">Schedule</a>
+						</li>
+						<li>
+							<a href="about.html">About</a>
+						</li>
+						<li>
+							<a href="portfolio.html">Porfolio</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</section>	
+			<section class="col-footer social">
+				<h5>Follow Us</h5>
+					<nav>
+						<ul>
+							<li>
+								<a href="facebook.com"><img src="img/fb-logo.png" alt="facebook" width="25px"></a>
+							</li>
+							<li>
+								<a href="youtube.com"><img src="img/yt-logo.png" alt="youtube" width="25px"></a>
+							</li>
+							<li>
+								<a href="twitter.com"><img src="img/twi-logo.png" alt="twitter" width="25px"></a>
+							</li>
+							</ul>
+					</nav>
+			</section>
+			<section class="col-footer company-info">
+				<h5>Address</h5>
+				<address>
+					<p>1385 Woodroffe Avenue</p>
+					<p>Nepean, ON K2G 1V8</p>
+					<p>Canda</p>
+				</address>
+			</section>
+		</div>
+	</footer>
+	<!-- footer end -->
+	<!--IS THIS PART NESSISARY???--->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- script tag is not a self closing tag so it requires </script> to close itself -->
+	<!-- To add an external script file, script tag is used with src attribute containing the path of the script that we would like to include in this document -->
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

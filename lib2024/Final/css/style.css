@@ -23,7 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -70,27 +70,17 @@ body {
 }
 
 
-
-/* In this CSS block
-	
-	we are targetting the <a> tags present in <li> which must be preset in <nav>, which must be present in <header> tag
-*/
 header nav li a {
 	color: rgb(0,0,0);
 	display: inline-block;
 }
 
 
-/* Priority listing of the inline, embeded and external style goes this way:*/
-/* inline > embeded > external */
 
 h1, h2, h3, h3 {
 	color: rgb(114,169,174);
 }
 
-/* 
-	to target an HTML element using id , we use "#" followed the value of the id attribute of that element
-*/
 #container {
 	background-color:rgba(114,169,174);
 	font color: rgb(184,184,184);
@@ -116,12 +106,6 @@ h1, h2, h3, h3 {
 		display: inline-flex;
 
 }
-
-
-
-/* to access a html element using its class, we use "." followed by its class name */
-/* All the elements with this class get the styles applied */
-
 
 #results {
 	position: right;
@@ -201,5 +185,84 @@ table, th, td
 	}
 	100% {
 		border-radius: 50%;
+	}
+}
+
+
+	.desktop-nav {
+		display: block;
+	}
+
+	.mobile-nav-container {
+		display: none;
+	}
+	.mobile-nav {
+		display: none;
+	}
+
+	.ham {
+		display: none;
+		height: 15px;
+		margin:15px;
+		padding-top: 5px;
+		position: relative;
+		float: right;
+		cursor: pointer;
+	}
+
+	.ham, .ham:before, .ham:after {
+		width: 30px;
+		border-top: 5px solid black;
+	}
+
+	.ham:before {
+		content: "";
+		display:block;
+		position: absolute;
+		background: black;
+	}
+
+	.ham:after {
+		content: "";
+		display: block;
+		background: black;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.site-content {
+		float: left;
+		width: 70%;
+		box-sizing: border-box;
+	}
+
+	.site-sidebar {
+		float: left;
+		width: 30%;
+		box-sizing: border-box;
+	}
+
+	.image-gallery .img-slide-thumb {
+		width: 33%;
+		padding: 10px;
+		box-sizing: border-box;
+		float: left;
+		box-shadow: none;
+	}
+
+
+	.col-footer {
+		width: 31%;
+		box-sizing: border-box;
+		margin: 0 1%;
+		padding: 10px;
+		float: left;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	footer {
+		background: #FFEB3B;
 	}
 }

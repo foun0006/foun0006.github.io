@@ -63,7 +63,6 @@ table {
 	Footer : ;
 */
 
-/*this is used to define the character set of the CSS file*/
 @charset "utf-8";
 
 body {
@@ -78,7 +77,9 @@ body {
 */
 header nav li a {
 	color: rgb(0,0,0);
+	display: inline-block;
 }
+
 
 /* Priority listing of the inline, embeded and external style goes this way:*/
 /* inline > embeded > external */
@@ -94,15 +95,29 @@ h1, h2, h3, h3 {
 	background-color:rgba(114,169,174);
 	font color: rgb(184,184,184);
 }
-
 #image {
 	position: right;
 	width: 30%;
+	display: inline-block;
 }
+
 
 #footer {
 	background-color:rgba(69,69,69);
+		width: 100%;
+		box-sizing: border-box;
+		margin: 0 1%;
+		padding: 10px;
+
 }
+
+.col-footer {
+		width: 33%;
+		display: inline-flex;
+
+}
+
+
 
 /* to access a html element using its class, we use "." followed by its class name */
 /* All the elements with this class get the styles applied */
@@ -114,16 +129,6 @@ h1, h2, h3, h3 {
 	display: none;
 	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
 
-
-.footer {
-		width: 33%;
-		box-sizing: border-box;
-		/*border box adjusts the width according to the padding only and does not consider margins*/
-		/*Therefore the space used by margins should be manually adjusted in the width declaration*/
-		margin: 0 1%;
-		padding: 10px;
-		float: left;
-	}
 
 
 table, th, td 
@@ -149,9 +154,6 @@ table, th, td
 	background: radial-gradient(#a7a7a7, #4e4e4e);
 	top: 0;
 	z-index: 2;
-	/* z index is used to make an element closer to screen*/
-	/*to create an overlay, this element must have the highest z-index value*/
-	/* eg if another element on your document has z-index : 1000, then this element must have atleast z-index value of 1001 */
 }
 
 .loader {
@@ -168,7 +170,6 @@ table, th, td
 }
 
 
-
 @keyframes spin {
 	from {
 		transform: rotate(0deg);
@@ -178,8 +179,6 @@ table, th, td
 	}
 }
 
-
-/*This @keyframes declaration will change the color from blue to orange to blue */
 
 @keyframes change-color {
 	0% {

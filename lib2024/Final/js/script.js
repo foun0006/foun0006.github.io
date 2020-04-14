@@ -1,46 +1,143 @@
-window.onload = init;
 
+window.onload = init;
 function init() {
 
-	// JQuery function attached to the submit event of the form with id "form"
+	document.querySelector('#color-1').onclick = changeColor;
+	document.querySelector('#color-2').onclick = changeColor;
+	document.querySelector('#color-3').onclick = changeColor;
+
+	document.querySelector('#loadTable').onclick = createTableFromJSON;
+
+
+	
+	document.querySelector('.reset').onclick = colorReset;
+	
+	document.querySelector('.ham').onclick = showHideMobileMenu;
+
+
 	$('#form').submit(function (e) {
-		// e.preventDefualt to avoid the form being submitted to page specified in action attribute 
    		 e.preventDefault();
-   		 // passing the current form (this) to variable form 
-   		 $("#results").removeClass('reveal');
    		 var form = this;
-   		 // fadeIn is a jQuery function to fadeIn an element 
    		 $(".overlay-container").fadeIn(1000, function(){
-   		 		//call the showFormValues function and pass variable form to it as argument
    		 		showformValues(form);
-		   		 // fadeOut is a jQuery function to fadeOut an element 
+   		 		createTableFromJSON();
    		 		$('.overlay-container').delay(500).fadeOut(500);
-   		 		$("#results").addClass('reveal');
    		 })
 	});
 
 }
 
-// to show the form values in the results div which takes the argument "form"
+
+function changeColor() {
+
+	var elementId = this.id;
+
+	this.style.backgroundColor = "red";
+
+	var indicatorText = document.getElementById("indicator-text");
+
+	if(!indicatorText.innerHTML.includes(elementId)) {
+
+		indicatorText.innerHTML = indicatorText.innerHTML+"<br>"+this.id+ " is active";
+	}
+
+}
+
+function colorReset() {
+
+	var jsColorDivs = document.getElementsByClassName('js-color');
+
+	for(var i =0; i <jsColorDivs.length; i++ ) {
+		console.log(i);
+
+		jsColorDivs[i].style.backgroundColor ="";
+	}
+
+	document.getElementById("indicator-text").innerHTML="";
+}
+
+
+function showHideMobileMenu() {
+
+	var mobileNav = document.querySelector('.mobile-nav');
+
+	if(mobileNav.style.display=="block") {
+		mobileNav.style.display="none";
+	} else {
+		mobileNav.style.display="block";
+	}
+}
+
 function showformValues(form){
-	//serializeArray is a jquery function used to get the values of a form as js Object
 	var formValues = $(form).serializeArray(); 
-	// $.each is a jquery alternative to for loop to iterate through an JS array or object  (Especially beneficial when the length of array is not known)
-	// index is the index  of the current element i.e 0,1,2,3 so on 
-		//field is the actual field being accessed 
 		
 	$.each(formValues, function(index, field){
-
-		// following code does the following : 
-		// 1) $("#results") -- (Gets the  selects the div with id results 
-		// 2) .fund("#"+field.name+"_result") -- finds the element with id equal to the name of the field being accessed along with text ("_result") Eg : name, pc_result, email_result
-		// 3) Modifies the text inside the selected element and replaces it with the value of this field   
 		$("#results").find("#"+field.name+"_result").text(field.value);
-
-		// special check for email to add a link instead of just string
 		if(field.name=="email"){
 			$("#results").find("#"+field.name+"_result").attr("href", "mailto:"+field.value);
 		}
 	})				
 }
 
+ function createTableFromJSON() {
+        var myBooks = [
+            {
+                "Student ID": "1",
+                "Name": "John Doe",
+                "Email": "jd@gmail.com",
+                "Marks": "92.60"
+            },
+            {
+                "Student ID": "2",
+                "Name": "Mark",
+                "Email": "mark@gmail.com",
+                "Marks": "56.00"
+            },
+            {
+                "Student ID": "3",
+                "Name": "Sam",
+                "Email": "sam@@gmail.com",
+                "Marks": "90.40"
+            }
+        ]
+
+        // EXTRACT VALUE FOR HTML HEADER. 
+        // ('Student ID', 'Name', 'Email' and 'Marks')
+        var col = [];
+        for (var i = 0; i < myBooks.length; i++) {
+            for (var key in myBooks[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        // CREATE DYNAMIC TABLE.
+        var table = document.createElement("table");
+
+        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+        var tr = table.insertRow(-1);                   // TABLE ROW.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+
+
+        for (var i = 0; i < myBooks.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = myBooks[i][col[j]];
+            }
+        }
+
+        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+        var divContainer = document.getElementById("json_table");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
